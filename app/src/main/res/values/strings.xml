@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DiabeticRunner</string>
+    <string name="weekly_summary_text">WEEKLY SUMMARY</string>
+    <string name="weekly_mileage_text">0 MILES</string>
+    <string name="weekly_bg_start_text">0 mg/dL</string>
+    <string name="weekly_bg_end_text">0 mg/dL</string>
+    <string name="add_shoe_button_text">ADD SHOE</string>
+    <string name="add_run_button_text">ADD RUN</string>
+    <string name="shoe_list_header_text">SHOES</string>
+    <string name="distance_measurement">miles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

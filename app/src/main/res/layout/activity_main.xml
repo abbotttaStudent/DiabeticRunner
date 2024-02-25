@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bannerFragment"
+        android:name="com.zybooks.diabeticrunner.BannerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    
+    <TextView
+        android:id="@+id/weeklySummaryHeader"
+        android:layout_height="25sp"
+        android:layout_width="match_parent"
+        style="@style/SectionText"
+        android:text="@string/weekly_summary_text"
+        app:layout_constraintTop_toBottomOf="@id/bannerFragment"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/weeklySummaryTopDivider"
+        style="@style/HorizontalDivider"
+        app:layout_constraintTop_toBottomOf="@id/weeklySummaryHeader"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weeklySummaryTopDivider"
+        android:id="@+id/weekly_mileage_circle"
+        android:src="@drawable/circle_mileage"
+        style="@style/WeeklyValueImage"
+        android:contentDescription="Weekly Mileage" />
+    <ImageView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weeklySummaryTopDivider"
+        android:id="@+id/weekly_bg_start_circle"
+        android:src="@drawable/circle_bg_start"
+        style="@style/WeeklyValueImage"
+        android:contentDescription="Weekly BG Start" />/>
+    <ImageView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weeklySummaryTopDivider"
+        android:id="@+id/weekly_bg_end_circle"
+        android:src="@drawable/circle_bg_end"
+        style="@style/WeeklyValueImage"
+        android:contentDescription="Weekly BG End" />
+    <TextView
+        android:id="@+id/weekly_mileage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DefaultText"
+        app:layout_constraintTop_toTopOf="@id/weekly_mileage_circle"
+        app:layout_constraintStart_toStartOf="@id/weekly_mileage_circle"
+        app:layout_constraintLeft_toLeftOf="@id/weekly_mileage_circle"
+        app:layout_constraintEnd_toEndOf="@id/weekly_mileage_circle"
+        app:layout_constraintBottom_toBottomOf="@id/weekly_mileage_circle"
+        app:layout_constraintRight_toRightOf="@id/weekly_mileage_circle"
+        android:text="@string/weekly_mileage_text"/>
+    <TextView
+        android:id="@+id/weekly_bg_start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DefaultText"
+        app:layout_constraintTop_toTopOf="@id/weekly_bg_start_circle"
+        app:layout_constraintStart_toStartOf="@id/weekly_bg_start_circle"
+        app:layout_constraintLeft_toLeftOf="@id/weekly_bg_start_circle"
+        app:layout_constraintEnd_toEndOf="@id/weekly_bg_start_circle"
+        app:layout_constraintBottom_toBottomOf="@id/weekly_bg_start_circle"
+        app:layout_constraintRight_toRightOf="@id/weekly_bg_start_circle"
+        android:text="@string/weekly_bg_start_text"/>
+    <TextView
+        android:id="@+id/weekly_bg_end_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DefaultText"
+        app:layout_constraintTop_toTopOf="@id/weekly_bg_end_circle"
+        app:layout_constraintStart_toStartOf="@id/weekly_bg_end_circle"
+        app:layout_constraintLeft_toLeftOf="@id/weekly_bg_end_circle"
+        app:layout_constraintEnd_toEndOf="@id/weekly_bg_end_circle"
+        app:layout_constraintBottom_toBottomOf="@id/weekly_bg_end_circle"
+        app:layout_constraintRight_toRightOf="@id/weekly_bg_end_circle"
+        android:text="@string/weekly_bg_end_text"/>
+    <View
+        android:id="@+id/weeklySummaryBottomDivider"
+        style="@style/HorizontalDivider"
+        app:layout_constraintTop_toBottomOf="@id/weekly_mileage_circle"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_last_activity"
+        android:name="com.zybooks.diabeticrunner.RunActivityFragment"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        app:layout_constraintTop_toBottomOf="@id/weeklySummaryBottomDivider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="25sp"/>
+
+    <View
+        android:id="@+id/lastActivityBottomDivider"
+        style="@style/HorizontalDivider"
+        app:layout_constraintTop_toBottomOf="@id/fragmentContainerView_last_activity"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/add_shoe_button"
+        style="@style/AddButton"
+        android:contentDescription="@string/add_shoe_button_text"
+        android:src="@drawable/circle_add_shoe"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastActivityBottomDivider" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DefaultText"
+        app:layout_constraintTop_toTopOf="@id/add_shoe_button"
+        app:layout_constraintStart_toStartOf="@id/add_shoe_button"
+        app:layout_constraintLeft_toLeftOf="@id/add_shoe_button"
+        app:layout_constraintEnd_toEndOf="@id/add_shoe_button"
+        app:layout_constraintBottom_toBottomOf="@id/add_shoe_button"
+        app:layout_constraintRight_toRightOf="@id/add_shoe_button"
+        android:text="@string/add_shoe_button_text" />
+
+    <ImageButton
+        android:id="@+id/add_run_button"
+        android:src="@drawable/circle_add_run"
+        style="@style/AddButton"
+        android:contentDescription="@string/add_run_button_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastActivityBottomDivider"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/DefaultText"
+            app:layout_constraintTop_toTopOf="@id/add_run_button"
+            app:layout_constraintStart_toStartOf="@id/add_run_button"
+            app:layout_constraintLeft_toLeftOf="@id/add_run_button"
+            app:layout_constraintEnd_toEndOf="@id/add_run_button"
+            app:layout_constraintBottom_toBottomOf="@id/add_run_button"
+            app:layout_constraintRight_toRightOf="@id/add_run_button"
+            android:text="@string/add_run_button_text" />
+
+    <TextView
+        android:id="@+id/shoeListHeader"
+        android:layout_height="25sp"
+        android:layout_width="match_parent"
+        style="@style/SectionText"
+        android:text="@string/shoe_list_header_text"
+        app:layout_constraintTop_toBottomOf="@id/add_run_button"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/addItemBottomDivider"
+        style="@style/HorizontalDivider"
+        app:layout_constraintTop_toBottomOf="@id/shoeListHeader"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ListView
+        android:id="@+id/shoeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addItemBottomDivider"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+    </ListView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

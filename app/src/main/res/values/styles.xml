@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WeeklyValueImage">
+        <item name="android:layout_height">75sp</item>
+        <item name="android:layout_width">75sp</item>
+        <item name="android:layout_margin">25sp</item>
+    </style>
+    <style name="DefaultText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+    <style name="SectionText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+    <style name="HorizontalDivider">
+        <item name="android:layout_height">4sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">25sp</item>
+        <item name="android:background">@color/medium</item>
+    </style>
+    <style name="AddButton">
+        <item name="android:layout_height">75sp</item>
+        <item name="android:layout_width">75sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginRight">50sp</item>
+        <item name="android:layout_marginLeft">50sp</item>
+        <item name="android:layout_marginTop">25sp</item>
+        <item name="android:layout_marginBottom">25sp</item>
+    </style>
+</resources>

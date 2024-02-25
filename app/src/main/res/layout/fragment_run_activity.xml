@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RunActivityFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:src="@drawable/rectangle_run_summary"
+        android:layout_width="match_parent"
+        android:layout_height="100sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="100sp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lynchburg Long Run" />
+            <TextView
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg. Pace" />
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_avg_pace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:08 min/mile"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02/18/2024" />
+            <TextView
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time" />
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_elapsed_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:05:08"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.50 Miles" />
+            <TextView
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start BG" />
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_bg_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="105 mg/dL"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start BG" />
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_bg_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="89 mg/dL"/>
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout>

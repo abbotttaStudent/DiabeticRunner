@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRunActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bannerFragment"
+        android:name="com.zybooks.diabeticrunner.BannerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/bannerFragment"
+        app:layout_constraintRight_toRightOf="parent" >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_description_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISTANCE" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_description" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_date_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_date" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_distance_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISTANCE" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_distance" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_elapsed_time_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ELAPSED TIME" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_elapsed_time" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_start_bg_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BEGINNING BG" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_start_bg" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_gravity="start"
+                android:id="@+id/activity_end_bg_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENDING BG" />
+            <EditText
+                android:layout_gravity="end"
+                android:id="@+id/activity_end_bg" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
